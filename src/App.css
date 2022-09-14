@@ -1,15 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.App{
-  font-family: 'Kumbh Sans', sans-serif;
-}
-
-html{
+.App {
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 10px;
+}
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.priceWrapper {
+  width: 100%;
+  padding: 2em 5em;
+}
+@media (min-width: 1200px) {
+  .App {
+    padding: 0 15%;
+  }
+  .Wrapper {
+    flex-direction: row;
+  }
+  .priceWrapper {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2em 5em;
+  }
 }

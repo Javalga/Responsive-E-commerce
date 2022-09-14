@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-
 export const Text = (props) => {
   return (
     <>
@@ -13,21 +12,15 @@ export const Text = (props) => {
           the weather can offer
         </p>
       </TextContainer>
-      <PriceContainer>
-        <div>
-          <Price>$125.00</Price>
-          <Discount>50%</Discount>
-        </div>
-        <PrevPrice>$250.00</PrevPrice>
-      </PriceContainer>
     </>
   );
 };
 
 const TextContainer = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 4em 7em;
+  margin-bottom: 1vh;
   span {
     font-size: 2rem;
     color: hsl(26, 100%, 55%);
@@ -35,7 +28,7 @@ const TextContainer = styled.div`
     margin-bottom: 1em;
   }
   h1 {
-    font-size: 5rem;
+    font-size: 4.5rem;
     margin-bottom: 0.5em;
   }
   p {
@@ -44,33 +37,9 @@ const TextContainer = styled.div`
     line-height: 1.5em;
     opacity: 75%;
   }
-`;
-const PriceContainer = styled.div`
-  padding: 1em 7em;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-`;
 
-const Price = styled.span`
-  font-size: 5rem;
-  font-weight: 700;
-  margin-right: 0.5em;
-`;
-
-const Discount = styled.span`
-  padding: 0.5em;
-  font-size: 3rem;
-  background-color: #fff0e2;
-  color: hsl(26, 100%, 55%);
-  font-weight: 700;
-  border-radius: 0.5em;
-`;
-
-const PrevPrice = styled.span`
-  font-size: 2rem;
-  justify-self: flex-end;
-  opacity: 75%;
-  text-decoration: line-through;
+  @media (min-width: 1200px) {
+    margin-bottom: 4em;
+    height: 60%;
+  }
 `;

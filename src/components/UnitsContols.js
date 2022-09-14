@@ -19,7 +19,7 @@ export const UnitControls = (props) => {
           onClick={props.handleSelectedUnits}
         ></img>
       </div>
-      <AddToCartBtn>
+      <AddToCartBtn onClick={props.handleSelectedItems}>
         Add to cart
       </AddToCartBtn>
     </UnitControlsContainer>
@@ -27,21 +27,35 @@ export const UnitControls = (props) => {
 };
 
 const UnitControlsContainer = styled.div`
-  margin-top: 4em;
+  @media (min-width: 1200px) {
+    padding: 0;
+    margin-top: 10em;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+  }
+  margin-top: 5em;
   width: 100%;
   display: flex;
-  padding: 0 7em;
+  padding: 0;
   flex-direction: column;
   div {
     display: flex;
     align-items: center;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 5em;
+    @media (min-width: 1200px) {
+      width: 25%;
+      margin-bottom: 0em;
+    }
     img {
-      width: 8%;
+      width: 5%;
       cursor: pointer;
+      @media (min-width: 1200px) {
+        width: 10%;
+      }
     }
     span {
       font-size: 3em;
@@ -51,13 +65,24 @@ const UnitControlsContainer = styled.div`
 `;
 
 const AddToCartBtn = styled.button`
-  padding: 1em;
-  width: 80%;
+  @media (min-width: 1200px) {
+    width: 50%;
+    margin-bottom: 0;
+    padding: 1.5em 5em;
+    font-size: 1.5rem;
+  }
+  cursor: pointer;
+  padding: 1.5em;
+  width: 100%;
   margin: auto;
-  font-size: 2em;
-  background-color: #FF7D1B;
+  font-size: 2rem;
+  background-color: #ff7d1b;
   border: 0;
-  border-radius: 1em;
+  border-radius: 0.3em;
   color: white;
   font-weight: 700;
+  margin-bottom: 5em;
+  -webkit-box-shadow: -1px 27px 29px -20px rgba(0, 0, 0, 0.49);
+  -moz-box-shadow: -1px 27px 29px -20px rgba(0, 0, 0, 0.49);
+  box-shadow: -1px 27px 29px -20px rgba(0, 0, 0, 0.49);
 `;
